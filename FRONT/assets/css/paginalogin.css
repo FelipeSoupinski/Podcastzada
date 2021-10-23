@@ -1,0 +1,58 @@
+body{
+    background-color: #3F2D2D;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+
+h2{
+    font-weight: bold;
+    text-align: center;
+}
+.user-logo{
+    width: 130px;
+    margin: auto 120px;
+}
+.bloco-login{
+    font-weight: bold;
+    height: auto;
+    background-color: #917070;
+    width: 400px;
+    margin: 0 auto;
+    padding: 50px 0;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    box-shadow: -10px -10px 5px 0 #000000;
+}
+
+label{
+    display: block;
+	margin: auto auto 4px;
+	padding: 10px 25px;
+	width: 50%;
+}
+.input-padrao{
+    background-color: #b992cc;
+    display: block;
+	margin: auto auto 20px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+.botao{
+    margin: 10% 120px 10%;
+    width:40%;
+	padding: 15px 0;
+	background: rgb(45, 45, 46);
+	color: white;
+	font-weight: bold;
+    font-size: 18px;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+p{
+    text-align: center;
+}

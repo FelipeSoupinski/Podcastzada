@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: #FFFFFF;
+}
+
+body{
+    background-color: #3F2D2D;
+}
+
+.center{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.centralizer{
+    margin-top: 30px;
+    text-align: center;
+}
+
+h2{
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.underline-mc{
+    background-color: #FFFFFF;
+    width: 40%;
+    height: 2px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.description{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+}
+
+.text-description{
+    width: 60%;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+.text-description h2{
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.text-description p{
+    margin-top: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 28px;    
+}
+
+.text-description .underline-dc{
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+}
+
+.description > img{
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 300px;
+    width: 300px;
+
+}
+
+.group-links{
+    margin-bottom: 80px;
+    margin-top: 35px;
+}
+
+.img-p-btn{
+    text-decoration: none;
+    width: 60%;
+}
+
+.right{
+    position: relative;
+    left: 200px;
+}
+
+
+.img-p-btn img{
+    background-color: white;
+    position: relative;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+}
+
+.img-p-btn span{
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 36px;
+}
+
+.envio{
+    padding: 10px;
+    border: 3px solid black;
+    margin-top: 30px;
+}
+
+.envio p:nth-of-type(1){
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.envio p:nth-of-type(2){
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFFFFF;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.envio p:nth-of-type(3){
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+.control-link-container{
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.control-icon{
+    width: 50px;
+}
+
+@media screen and (max-width:1048px){
+    .img-p-btn{
+        display: block;
+    }
+
+    .img-p-btn span{
+        line-height: 60px;
+    }
+
+    .right{
+        position: static;
+    }
+}
+
+@media screen and (max-width: 810px){
+    .description{
+        display: block;
+    }
+}

@@ -1,0 +1,113 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.bot-bar{
+   position: fixed;
+   bottom: 0;
+   z-index: 15;
+   width: 100%;
+   height: 90px;
+   background: #C4C4C4;
+   color: #000;
+   line-height: 30px;
+}
+
+.bot-bar .player-controls {
+   text-align: center;
+}
+
+.bot-bar .player-controls span{
+   cursor: pointer;
+   padding: 0 5px;
+   color: black;
+   -webkit-transition: all linear 0.2s;
+}
+
+.bot-bar .player-controls span:hover {
+   color: #EEE;
+}
+
+.bot-bar .player-display {
+   width: 100%;
+   float: left;
+   margin-left: 10px;
+}
+
+.bot-bar .player-display .player-current-track {
+   color: black;
+}
+
+.bot-bar .player {
+   float: left;
+}
+
+.bot-bar .player-timeline {
+   float: left;
+   max-width: 100%;
+   width: 100%;
+   height: 5px;
+   background: #555;
+}
+
+.bot-bar .player-timeline-control {
+   height: 4px;
+   background: #999;
+}
+
+.logo-player {
+   width: 72px;
+   height: 72px;
+   margin: 5px 0 0 20px;
+}
+
+.space {
+   height: 120px;
+}
+
+.space-canal {
+   height: 300px;
+}
+
+.btn-play, .btn-pause, .btn-next, .btn-prev {
+   width: 40px;
+   height: 40px;
+}
+
+.btn-velocidade {
+   float: right;
+}
+
+.btn-volume {
+   margin: 20px 0 0 0;
+   float: right;
+}
+
+.img-favorito {
+   width: 40px;
+   height: 40px;
+   float: left;
+}
+
+.volume-control {
+   margin-top: 29px;
+   float: left;
+}
+
+#tempo-total {
+   color: black;
+}
+
+.tempo-total {
+   margin-top: 25px;
+}
+
+#tempo-atual {
+   color: black;
+}
+
+.tempo-atual {
+   margin: 25px 0 0 10px;
+}

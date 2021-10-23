@@ -1,0 +1,96 @@
+#infoPadrao {
+    width: 55vw;
+    margin-left: 23%;
+}
+
+h3 {
+    font-family: Ubuntu;
+    font-size: 25px;
+    text-decoration: underline;
+    text-decoration-color: #C4C4C4;
+}
+
+h2 {
+    font-family: Ubuntu;
+    font-size: 20px;
+}
+
+#imgPerfil {
+    width: 150px;
+    height: 150px;
+    margin-left: 28%;
+    top: 0px;
+    right: 0px;
+}
+
+#listaPodCast {
+    list-style-type: none;
+}
+
+#titlePod {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#descPod {
+    font-size: 80%;
+}
+
+#botaoPlayHoraMin {
+    height: 45px;
+    width: 60px;
+    border-radius: 25px;
+    position: relative;
+    background-color: #C4C4C4;
+    text-align: center
+}
+
+#imgBotaoPlay {
+    width: 40px;
+    width: 40px;
+    position: absolute;
+    top: 3px;
+    left: 10px;
+}
+
+#hora {
+    color: black;
+}
+
+#botaoPlayHora {
+    height: 45px;
+    width: 150px;
+    border-radius: 25px;
+    position: relative;
+    background-color: #C4C4C4;
+    text-align: center
+}
+
+.pt-10 {
+    padding-top: 2em;
+}
+
+.btn-speed {
+    border-radius: 50%;
+    border: black 1px solid;
+    font-size: 13px;
+    width: 55px;
+    height: 55px;
+}
+
+#dropdown-speed {
+    left: -10px !important;
+    min-width: 90px !important;
+    cursor: pointer;
+}
+
+.link-pesq {
+    color: white;
+    text-align: center;
+    display: flow-root;
+}
+
+.link-pesq:hover {
+    color: #C4C4C4;
+    text-decoration: none;
+}

@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    background-color: #3F2D2D !important;
+}
+
+.row {
+    margin: 0;
+}
+
+.header-est {
+    height: 90px;
+    width: calc(100% - 1px);
+    background: #802828;
+    border: 1px solid #000000;
+}
+
+.logo {
+    width: 170px;
+    height: 86px;
+}
+
+.content-dropdown {
+    padding: 32px 0 0 60px;
+}
+
+.user-toggle {
+    float: right;
+}
+
+.user-toggle::after,
+ ::before {
+    display: none;
+}
+
+.btn-mes {
+    color: #fff;
+    background-color: #802828;
+    border-color: #802828;
+}
+
+.grafico {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.txt-footer-img {
+    padding-left: 29vw;
+    padding-top: 2vh;
+}
+
+.ubuntu {
+    font-family: Ubuntu;
+}
+
+.txt-normal {
+    font-style: normal;
+    font-weight: normal;
+}
+
+.fs22 {
+    font-size: 22px;
+}
+
+.fs26 {
+    font-size: 26px;
+}

@@ -1,0 +1,54 @@
+.form-edit{
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #8b805e6b;
+    border: 5px solid black;
+    padding: 20px;
+}
+
+label{
+    font-family: 'Ubuntu', sans-serif;
+    margin-right: 50px;
+    color: rgb(231, 195, 195);
+}
+
+.legend{
+    float: right;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 28px;
+    color: #fff;
+}
+
+.input-text{
+    color: black;
+    border-radius: 10px;
+    display: inline-block;
+    width: 60%;
+    height:40px;
+    background:#C4C4C4;
+    border: 2px solid black;
+}
+.input-description{
+    color: black;
+    border-radius: 10px;
+    display: inline-block;
+    width:60%;
+    height:100px;
+    background:#C4C4C4;
+    border: 2px solid black;
+}
+
+.text{
+    margin-bottom: 20px;
+}
+
+.submit-form{
+    margin-top: 10px;
+    margin-left: 40%;
+    border: 2px solid black;
+    color: #332c3b;
+    border-radius: 10%;
+}

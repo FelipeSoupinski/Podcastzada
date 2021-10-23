@@ -1,0 +1,83 @@
+body {
+    background-color: #3F2D2D;
+}
+
+input {
+    background-color: rgba(119, 30, 30, 0.2) !important;
+    border: 1px solid #000000 !important;
+    box-sizing: border-box !important;
+}
+
+input::placeholder {
+    color: #7e2222 !important;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card {
+    background-color: #E0C9C9;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: -25px 20px 4px rgba(0, 0, 0, 0.25);
+}
+
+.centro {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.login-box {
+    width: 400px;
+}
+
+.nameLogo {
+    font-family: Ubuntu;
+    font-size: 36px;
+    color: white;
+}
+
+.user-logo {
+    width: 180px;
+    height: 180px;
+}
+
+.content-center {
+    justify-content: center;
+}
+
+.input-group {
+    margin: 15px 0;
+    padding: 0 15px;
+}
+
+.btn-confirm {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 80px;
+    width: 220px;
+    height: 50px;
+    color: #FFFFFF;
+    font-family: Ubuntu;
+    font-size: 25px;
+    background-color: #363636;
+    border: solid #FFFFFF 1px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.login-link {
+    text-decoration: none;
+    font-family: Ubuntu;
+    color: black;
+}
+
+.label-recover {
+    font-family: Ubuntu;
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+}

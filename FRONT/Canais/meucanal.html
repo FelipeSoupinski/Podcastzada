@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PodCast Play</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../assets/css/plugins/toastr/toastr.css" />
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../assets/css/player.css" />
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/meucanal.css" />
+</head>
+
+<body>
+    <header class="header-est">
+        <a href="/PHPodCast"><img src="../assets/img/contents/logo-sem-fundo.png" class="logo"
+                alt="logo PHPodCast" /></a>
+        <form method="post" accept-charset="utf-8" class="search-form" action="/PHPodCast/pesquisa/search">
+            <div class="input search required">
+                <input type="search" name="pesquisa" class="search-bar" placeholder="Pesquise um Podcast" minlength="2"
+                    required="required" id="pesquisa" />
+            </div>
+            <div class="submit">
+                <input type="submit" class="btn-pesquisa" alt="pesquisar" value="" />
+            </div>
+        </form>
+        <a class="dropdown-toggle user-toggle" id="dropdownMenuPerfil" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <img src="../assets/files/usuarios/1/batman.jpg" class="user-img" alt="foto do perfil do usuário" />
+        </a>
+        <div class="dropdown-menu mr-3" aria-labelledby="dropdownMenuPerfil">
+            <a href="../assets/usuarios/configuracoes" class="dropdown-item">Configurações</a>
+            <a href="../assets/meucanal" class="dropdown-item">Meu canal</a>
+            <a href="/PHPodCast/login/logout" class="dropdown-item">Sair</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="center">
+            <h2 class="centralizer">Meu canal</h2>
+            <div class="underline-mc"></div>
+
+            <div class="description">
+                <div class="text-description">
+                    <h2>Baroes da pisadinha</h2>
+                    <div class="underline-dc"></div>
+                    <p>O melhor do forró nacional</p>
+                    <a href="../Canais/edit.html" class="control-link-container text-center"><img
+                            src="../assets/img/edit-icon.png" class="control-icon" alt="Editar canal" />
+                        <p>Editar canal</p>
+                    </a>
+                    <form name="post_61744477ac0d5989907966" style="display: none" method="post"
+                        action="../assets/canais/delete/6">
+                        <input type="hidden" name="_method" value="POST" /><input type="hidden" name="_csrfToken"
+                            autocomplete="off"
+                            value="d3e54e3c8611aab7239f4c543df1f7559c5de9d630a377fc6bdf48b55c190623a60cea1ce706e6a288f1a862c9bcfeca25ea83458852b64a0bcc129d3d17edf7" />
+                    </form>
+                    <a href="#" class="control-link-container text-center"
+                        onclick='if (confirm("Voc\u00ea realmente deseja apagar este canal?")) { document.post_61744477ac0d5989907966.submit(); } event.returnValue = false; return false;'><img
+                            src="../assets/img/del-icon.png" class="control-icon" alt="Excluir canal" />
+                        <p>Excluir canal</p>
+                    </a>
+                </div>
+
+                <img src="../assets/files/canais/6/baroes.png" alt="logo-podcast" />
+            </div>
+
+            <div class="group-links">
+                <a href="../assets/episodios/add" class="img-p-btn"><img src="../assets/img/contents/icon-mais.webp"
+                        alt="adicionar-podcast" /><span>Add novo Podcast</span></a>
+                <a href="../assets/estatisticas/canal/6" class="img-p-btn right"><img
+                        src="../assets/img/contents/view.png" alt="ver-estatisticas" /><span>Ver
+                        estatísticas</span></a>
+            </div>
+
+            <h2>Meus envios</h2>
+
+            <div class="envio">
+                <p>Postado em 21/11/2020</p>
+                <p>Matuto se apaixonou</p>
+                <p>
+                    Uma morena dos cabelos grandes, uma estrutura dessa acabou com o
+                    homem...
+                </p>
+                <a href="../assets/episodios/edit/1" class="control-link-container text-center"><img
+                        src="../assets/img/edit-icon.png" class="control-icon" alt="Editar envio" />
+                    <p>Editar envio</p>
+                </a>
+                <form name="post_61744477accba611302923" style="display: none" method="post"
+                    action="../assets/canais/delete/1">
+                    <input type="hidden" name="_method" value="POST" /><input type="hidden" name="_csrfToken"
+                        autocomplete="off"
+                        value="d3e54e3c8611aab7239f4c543df1f7559c5de9d630a377fc6bdf48b55c190623a60cea1ce706e6a288f1a862c9bcfeca25ea83458852b64a0bcc129d3d17edf7" />
+                </form>
+                <a href="#" class="control-link-container text-center"
+                    onclick="document.post_61744477accba611302923.submit(); event.returnValue = false; return false;"><img
+                        src="../assets/img/del-icon.png" class="control-icon" alt="Excluir envio" />
+                    <p>Excluir envio</p>
+                </a>
+            </div>
+            <div class="envio">
+                <p>Postado em 21/11/2020</p>
+                <p>Recairei</p>
+                <p>
+                    Eu já te superei, mas não manda mensagem, por favor, senão recairei.
+                </p>
+                <a href="../assets/episodios/edit/2" class="control-link-container text-center"><img
+                        src="../assets/img/edit-icon.png" class="control-icon" alt="Editar envio" />
+                    <p>Editar envio</p>
+                </a>
+                <form name="post_61744477acdde573110952" style="display: none" method="post"
+                    action="../assets/canais/delete/2">
+                    <input type="hidden" name="_method" value="POST" /><input type="hidden" name="_csrfToken"
+                        autocomplete="off"
+                        value="d3e54e3c8611aab7239f4c543df1f7559c5de9d630a377fc6bdf48b55c190623a60cea1ce706e6a288f1a862c9bcfeca25ea83458852b64a0bcc129d3d17edf7" />
+                </form>
+                <a href="#" class="control-link-container text-center"
+                    onclick="document.post_61744477acdde573110952.submit(); event.returnValue = false; return false;"><img
+                        src="../assets/img/del-icon.png" class="control-icon" alt="Excluir envio" />
+                    <p>Excluir envio</p>
+                </a>
+            </div>
+            <div class="envio">
+                <p>Postado em 21/11/2020</p>
+                <p>Investe em mim</p>
+                <p>
+                    Investe em mim, aposta tudo em mim, que eu prometo te fazer feliz...
+                </p>
+                <a href="../assets/episodios/edit/3" class="control-link-container text-center"><img
+                        src="../assets/img/edit-icon.png" class="control-icon" alt="Editar envio" />
+                    <p>Editar envio</p>
+                </a>
+                <form name="post_61744477acf9c555941080" style="display: none" method="post"
+                    action="../assets/canais/delete/3">
+                    <input type="hidden" name="_method" value="POST" /><input type="hidden" name="_csrfToken"
+                        autocomplete="off"
+                        value="d3e54e3c8611aab7239f4c543df1f7559c5de9d630a377fc6bdf48b55c190623a60cea1ce706e6a288f1a862c9bcfeca25ea83458852b64a0bcc129d3d17edf7" />
+                </form>
+                <a href="#" class="control-link-container text-center"
+                    onclick="document.post_61744477acf9c555941080.submit(); event.returnValue = false; return false;"><img
+                        src="../assets/img/del-icon.png" class="control-icon" alt="Excluir envio" />
+                    <p>Excluir envio</p>
+                </a>
+            </div>
+
+            <div class="mb-5"></div>
+        </div>
+    </main>
+
+    <script src="../assets/js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/plugins/jquery/jquery.min.js"></script>
+    <script src="../assets/js/plugins/toastr/toastr.min.js"></script>
+</body>
+
+</html>

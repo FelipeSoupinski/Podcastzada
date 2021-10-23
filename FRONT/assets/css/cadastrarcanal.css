@@ -1,0 +1,29 @@
+
+.input-text{
+    border-radius: 10px;
+    display: inline-block;
+    width: 60%;
+    height:40px;
+    background:#C4C4C4;
+}
+.input-description{
+    border-radius: 10px;
+    display: inline-block;
+    width:60%;
+    height:100px;
+    background:#C4C4C4;
+}
+
+.input-imagem{
+    background-image: url('../img/imagemdefault.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: 70%;
+}
+.img-cadastrarcanal{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    
+}
