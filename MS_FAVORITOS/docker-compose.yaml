@@ -5,7 +5,7 @@ services:
     restart: always
     env_file: ./.env
     ports:
-      - 3306:3306
+      - 3307:3306
     command: --innodb_use_native_aio=0 --socket=/tmp/mysql.sock --bind_address=0.0.0.0
     volumes:
       - ./db:/var/lib/mysql
@@ -25,6 +25,6 @@ services:
       - .:/home/node/app
       - /home/node/app/node_modules
     ports:
-      - 3000:3000
+      - 3001:3000
     environment:
       - CHOKIDAR_USEPOLLING=1
