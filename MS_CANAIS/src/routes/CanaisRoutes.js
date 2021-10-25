@@ -1,11 +1,11 @@
 const router = require('express').Router();
-
 const CanalController = require('../controllers/CanalController');
+const auth = require('../middleware/auth');
 
-router.post('/', CanalController.create);
-router.get('/', CanalController.index);
-router.get('/:id', CanalController.show);
-router.put('/:id', CanalController.update);
-router.delete('/:id', CanalController.destroy);
+router.post('/', auth, CanalController.create);
+router.get('/', auth, CanalController.index);
+router.get('/:id', auth, CanalController.show);
+router.put('/:id', auth, CanalController.update);
+router.delete('/:id', auth, CanalController.destroy);
 
 module.exports = router;
