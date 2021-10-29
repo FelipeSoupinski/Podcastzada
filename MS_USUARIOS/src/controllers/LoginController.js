@@ -8,13 +8,11 @@ exports.login = async (req, res) => {
             email, senha
         } = req.body;
 
-        console.log(req.body)
         const usuario = await Usuario.findOne({
             where: {
                 email: email
             }
         });
-        console.log(usuario)
         if (!usuario) {
             return res.status(401).send({
                 message: 'Email inválido'
@@ -38,6 +36,7 @@ exports.login = async (req, res) => {
             token
         });
     } catch (error) {
+        console.log(error);
         return res.status(500).send({
             error
         });

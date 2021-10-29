@@ -63,8 +63,9 @@ exports.update = async (req, res) => {
         }
 
         if(senha) {
+            const senhaHash = await bcrypt.hash(senha, 10);
             await usuario.update({
-                senha
+                senha: senhaHash
             });
         }
 
@@ -90,6 +91,20 @@ exports.destroy = async (req, res) => {
             message: "Usuario deletado com sucesso."
         });
     } catch (error) {
+        return res.status(500).send({
+            error
+        });
+    }
+}
+
+exports.hashPassword = async (req, res) => {
+    try{
+        const password = req.body.password;
+        const senhaHash = await bcrypt.hash(password, 10)
+        res.send({
+            hashedPassword: senhaHash
+        });
+    } catch(error) {
         return res.status(500).send({
             error
         });

@@ -18,14 +18,14 @@ const inputSenhaVelha1 = document.querySelector('#password');
 const inputSenhaVelha2 = document.querySelector('#OldPassword')
 
 if(alterEmail) {
-  alterEmail.addEventListener('click', async () => {
-   await alterarEmail();
+  alterEmail.addEventListener('click', () => {
+    alterarEmail();
   })
 }
 
 if(alterSenha) {
-  alterSenha.addEventListener('click', async () => {
-   await alterarSenha();
+  alterSenha.addEventListener('click',  () => {
+    alterarSenha();
   })
 }
 
@@ -49,7 +49,6 @@ async function alterarEmail() {
   if(response) {
     alert(response.message);
     const loginResponse = await performPostHttpRequest('http://localhost:3000/login', headers, {email: inputEmailNovo.value, senha: inputSenhaVelha1.value});
-    console.log(loginResponse)
     localStorage.setItem('jwt', loginResponse.token);
   } else{
     alert("Erro inesperado");

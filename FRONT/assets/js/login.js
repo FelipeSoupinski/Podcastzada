@@ -5,8 +5,8 @@ if(localStorage.getItem('jwt')) {
 const loginForm = document.querySelector("#loginForm");
 
 if(loginForm) {
-  loginForm.addEventListener("submit", async function(e) {
-    await submitForm(e, this);
+  loginForm.addEventListener("submit", function(e) {
+    submitForm(e, this);
   });
 }
 

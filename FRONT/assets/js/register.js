@@ -5,8 +5,8 @@ if(localStorage.getItem('jwt')) {
 const loginForm = document.querySelector("#registerForm");
 
 if(loginForm) {
-  loginForm.addEventListener("submit", function(e) {
-    submitForm(e, this);
+  loginForm.addEventListener("submit",  function(e) {
+   submitForm(e, this);
   });
 }
 
@@ -18,10 +18,11 @@ async function submitForm(e, form) {
   headers.set('Content-Type', 'application/json');
 
   const response = await performPostHttpRequest('http://localhost:3000/usuarios', headers, jsonFormData);
-  
+  console.log(jsonFormData)
   if(response) {
     const { email, senha } = jsonFormData;
     const loginResponse = await performPostHttpRequest('http://localhost:3000/login', headers, {email: email, senha: senha});
+
     localStorage.setItem('jwt', loginResponse.token);
     window.location.href = '../Home/home.html';
   } else {
