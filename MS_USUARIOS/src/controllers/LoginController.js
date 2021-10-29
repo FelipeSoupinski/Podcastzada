@@ -7,13 +7,14 @@ exports.login = async (req, res) => {
         const {
             email, senha
         } = req.body;
-        
+
+        console.log(req.body)
         const usuario = await Usuario.findOne({
             where: {
                 email: email
             }
         });
-
+        console.log(usuario)
         if (!usuario) {
             return res.status(401).send({
                 message: 'Email inválido'
@@ -32,7 +33,7 @@ exports.login = async (req, res) => {
             email: usuario.email,
         }, process.env.APP_KEY);
 
-        res.send({
+        res.status(200).send({
             type: 'Bearer',
             token
         });

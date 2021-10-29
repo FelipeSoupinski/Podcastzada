@@ -1,3 +1,8 @@
+const logoutButton = document.querySelector('#logout');
+if(logoutButton) {
+    logoutButton.addEventListener("click", () => localStorage.clear());
+}
+
 function setVars(files, favoritos) {
     window.files = files;
     window.favoritos = favoritos;

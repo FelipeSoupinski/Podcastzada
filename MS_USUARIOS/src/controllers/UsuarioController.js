@@ -39,7 +39,7 @@ exports.index = async (req, res) => {
 
 exports.show = async (req, res) => {
     try {
-        const usuario = await Usuario.findById(req.params.id);
+        const usuario = await Usuario.findByPk(req.params.id);
         return res.send(usuario);
     } catch (error) {
         return res.status(500).send({
@@ -51,14 +51,22 @@ exports.show = async (req, res) => {
 exports.update = async (req, res) => {
     try {
         const {
-            nome, email, senha, nascimento, imagem
+            email, senha
         } = req.body;
 
-        const usuario = await Usuario.findById(req.params.id);
+        const usuario = await Usuario.findByPk(req.params.id);
 
-        await usuario.update({
-            nome, email, senha, nascimento, imagem
-        });
+        if(email) {
+            await usuario.update({
+                email
+            });
+        }
+
+        if(senha) {
+            await usuario.update({
+                senha
+            });
+        }
 
         res.send({
             message: "Usuario atualizado com sucesso."
@@ -72,7 +80,7 @@ exports.update = async (req, res) => {
 
 exports.destroy = async (req, res) => {
     try {
-        const usuario = await Usuario.findById(req.params.id);
+        const usuario = await Usuario.findByPk(req.params.id);
 
         await usuario.update({
             deletedAt: new Date()

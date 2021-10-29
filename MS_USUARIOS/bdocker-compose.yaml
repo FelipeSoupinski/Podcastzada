@@ -14,17 +14,17 @@ services:
       MYSQL_ROOT_PASSWORD: usuarios
     network_mode: 'podcastzada'
   app:
-   restart: "always"
-   build:
-     context: .
-     dockerfile: Dockerfile
-   depends_on:
-     - db
-   network_mode: 'podcastzada'
-   volumes:
-     - .:/home/node/app
-     - /home/node/app/node_modules
-   ports:
-     - 3000:3000
-   environment:
-     - CHOKIDAR_USEPOLLING=1
+    restart: "always"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    network_mode: 'podcastzada'
+    volumes:
+      - .:/home/node/app
+      - /home/node/app/node_modules
+    ports:
+      - 3000:3000
+    environment:
+      - CHOKIDAR_USEPOLLING=1
