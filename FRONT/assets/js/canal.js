@@ -1,4 +1,4 @@
-const cadastrarCanal = document.querySelector("#cadastrarCanal");
+const cadastrarCanal = document.querySelector("#canal");
 
 function parseJwt (token) {
   var base64Url = token.split('.')[1];
