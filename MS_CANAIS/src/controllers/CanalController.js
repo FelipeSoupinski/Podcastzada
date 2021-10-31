@@ -20,7 +20,7 @@ exports.create = async (req, res) => {
         
         const canal = await Canal.create({ nome, categoria, descricao, imagem, usuario_id });
 
-        res.send({
+        res.status(200).send({
             message: "Canal cadastrado com sucesso.",
             canal
         });
