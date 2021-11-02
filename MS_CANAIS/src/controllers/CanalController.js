@@ -61,7 +61,7 @@ exports.index = async (req, res) => {
 
 exports.show = async (req, res) => {
     try {
-        const canal = await Canal.findById(req.params.id);
+        const canal = await Canal.findByPk(req.params.id);
         return res.send(canal);
     } catch (error) {
         return res.status(500).send({
@@ -76,7 +76,7 @@ exports.update = async (req, res) => {
             nome, categoria, descricao, imagem, usuario_id
         } = req.body;
 
-        const canal = await Canal.findById(req.params.id);
+        const canal = await Canal.findByPk(req.params.id);
 
         await canal.update({
             nome, categoria, descricao, imagem, usuario_id
@@ -112,7 +112,12 @@ exports.destroy = async (req, res) => {
 
 exports.findByUserId = async (req, res) => {
     try {
-        const canal = await Canal.findOne({ where: { usuario_id: req.body.usuario_id, deletedAt: null } });
+        const canal = await Canal.findOne({ 
+            where: { 
+                usuario_id: req.body.usuario_id,
+                deletedAt: null
+            }
+        });
         return res.status(200).send({ canal });
     } catch(error) {
         res.status(500).send({ error });
