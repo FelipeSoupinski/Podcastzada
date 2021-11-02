@@ -25,7 +25,7 @@
             <div class="card">
                 <div class="row">
                     <div class="card-body">
-                        <form method="post" accept-charset="utf-8" action="/PHPodCast/login/register">
+                        <form id="registerForm" accept-charset="utf-8" action="">
                             <div class="input-group">
                                 <input type="email" name="email" class="form-control" placeholder="email" id="email">
                             </div>
@@ -36,10 +36,10 @@
                                 <input type="text" name="nome" class="form-control" placeholder="nome completo"
                                     id="nome">
                             </div>
-                            <div class="input-group">
+                            <!-- <div class="input-group">
                                 <input type="date" name="nascimento" class="form-control"
                                     placeholder="data de nascimento" id="nascimento">
-                            </div>
+                            </div> -->
 
                             <div class="row content-center">
                                 <input type="checkbox" class="mr-2 mt-1" required>
@@ -55,7 +55,7 @@
                         </form>
                         <hr>
                         <div class="row content-center">
-                            <a href="/PHPodCast/login" class="login-link">Já possuo uma conta</a> </div>
+                            <a href="../Login/login.html" class="login-link">Já possuo uma conta</a> </div>
                     </div>
                 </div>
                 <!-- /.login-card-body -->
@@ -75,6 +75,7 @@
     <script src="../assets/js/owl.carousel.min.js"></script>
     <script src="../assets/js/jplayer/jquery.jplayer.min.js"></script>
     <script src="../assets/js/player.js"></script>
+    <script src="../assets/js/register.js"></script>
     <script src="../assets/js/index.js"></script>
     <script src="../assets/js/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/js/plugins/toastr/toastr.min.js"></script>

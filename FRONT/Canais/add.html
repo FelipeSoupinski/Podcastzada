@@ -22,7 +22,7 @@
 
 <body>
     <header class="header-est">
-        <a href="/PHPodCast"><img src="../assets/img/contents/logo-sem-fundo.png" class="logo"
+        <a href="../Home/home.html"><img src="../assets/img/contents/logo-sem-fundo.png" class="logo"
                 alt="logo PHPodCast" /></a>
         <form method="post" accept-charset="utf-8" class="search-form" action="../assets/pesquisa/search">
             <div style="display: none">
@@ -45,7 +45,7 @@
         <div class="dropdown-menu mr-3" aria-labelledby="dropdownMenuPerfil">
             <a href="../Usuarios/configuracoes.html" class="dropdown-item">Configurações</a>
             <a href="../Canais/meucanal.html" class="dropdown-item">Meu canal</a>
-            <a href="../assets/login/logout" class="dropdown-item">Sair</a>
+            <a id="logout" href="../Login/login.html" class="dropdown-item">Sair</a>
         </div>
     </header>
 
@@ -53,12 +53,7 @@
         <div class="title-add">Cadastrar Canal</div>
         <div class="linha-horizontal"></div>
 
-        <form enctype="multipart/form-data" method="post" accept-charset="utf-8" action="../assets/canais/add">
-            <div style="display: none">
-                <input type="hidden" name="_method" value="POST" /><input type="hidden" name="_csrfToken"
-                    autocomplete="off"
-                    value="d3e54e3c8611aab7239f4c543df1f7559c5de9d630a377fc6bdf48b55c190623a60cea1ce706e6a288f1a862c9bcfeca25ea83458852b64a0bcc129d3d17edf7" />
-            </div>
+        <form id="canal" enctype="multipart/form-data" method="post" accept-charset="utf-8" action="">
             <div class="row mt-4">
                 <div class="col-sm-4">
                     <span class="legend"> Nome do Canal</span>
@@ -85,17 +80,17 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
+           <!--  <div class="row mt-5">
                 <div class="col-sm-4">
                     <span class="legend"> Imagem </span>
                 </div>
                 <div class="col-sm-5">
-                    <input type="file" class="input-imagem form-control" name="imagem" />
+                    <input type="text" class="input-imagem form-control" name="imagem" />
                 </div>
                 <div class="col-sm-3 mt-">
                     <img src="../assets/img/contents/podcast-img-4.jpg" class="img-cadastrarcanal" alt="" />
                 </div>
-            </div>
+            </div> -->
 
             <div class="row mt-5">
                 <div class="col-sm text-center">
@@ -116,6 +111,8 @@
     <script src="../assets/js/owl.carousel.min.js"></script>
     <script src="../assets/js/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/js/plugins/toastr/toastr.min.js"></script>
+    <script src="../assets/js/canal.js"></script>
+    <script src="../assets/js/index.js"></script>
 </body>
 
 </html>

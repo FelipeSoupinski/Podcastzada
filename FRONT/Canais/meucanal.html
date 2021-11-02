@@ -21,7 +21,7 @@
 
 <body>
     <header class="header-est">
-        <a href="/PHPodCast"><img src="../assets/img/contents/logo-sem-fundo.png" class="logo"
+        <a href="../Home/home.html"><img src="../assets/img/contents/logo-sem-fundo.png" class="logo"
                 alt="logo PHPodCast" /></a>
         <form method="post" accept-charset="utf-8" class="search-form" action="/PHPodCast/pesquisa/search">
             <div class="input search required">
@@ -37,9 +37,9 @@
             <img src="../assets/files/usuarios/1/batman.jpg" class="user-img" alt="foto do perfil do usuário" />
         </a>
         <div class="dropdown-menu mr-3" aria-labelledby="dropdownMenuPerfil">
-            <a href="../assets/usuarios/configuracoes" class="dropdown-item">Configurações</a>
-            <a href="../assets/meucanal" class="dropdown-item">Meu canal</a>
-            <a href="/PHPodCast/login/logout" class="dropdown-item">Sair</a>
+            <a href="../Usuarios/configuracoes.html" class="dropdown-item">Configurações</a>
+            <a href="../Canais/meucanal.html" class="dropdown-item">Meu canal</a>
+            <a id="logout" href="../Login/login.html" class="dropdown-item">Sair</a>
         </div>
     </header>
 
@@ -50,21 +50,15 @@
 
             <div class="description">
                 <div class="text-description">
-                    <h2>Baroes da pisadinha</h2>
+                    <h2 id="nomeCanal"></h2>
                     <div class="underline-dc"></div>
-                    <p>O melhor do forró nacional</p>
+                    <p id="descricaoCanal"></p>
                     <a href="../Canais/edit.html" class="control-link-container text-center"><img
                             src="../assets/img/edit-icon.png" class="control-icon" alt="Editar canal" />
                         <p>Editar canal</p>
                     </a>
-                    <form name="post_61744477ac0d5989907966" style="display: none" method="post"
-                        action="../assets/canais/delete/6">
-                        <input type="hidden" name="_method" value="POST" /><input type="hidden" name="_csrfToken"
-                            autocomplete="off"
-                            value="d3e54e3c8611aab7239f4c543df1f7559c5de9d630a377fc6bdf48b55c190623a60cea1ce706e6a288f1a862c9bcfeca25ea83458852b64a0bcc129d3d17edf7" />
-                    </form>
                     <a href="#" class="control-link-container text-center"
-                        onclick='if (confirm("Voc\u00ea realmente deseja apagar este canal?")) { document.post_61744477ac0d5989907966.submit(); } event.returnValue = false; return false;'><img
+                        id="deleteCanal"><img
                             src="../assets/img/del-icon.png" class="control-icon" alt="Excluir canal" />
                         <p>Excluir canal</p>
                     </a>
@@ -166,6 +160,7 @@
     <script src="../assets/js/owl.carousel.min.js"></script>
     <script src="../assets/js/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/js/plugins/toastr/toastr.min.js"></script>
+    <script src="../assets/js/meucanal.js"></script>
 </body>
 
 </html>
