@@ -68,82 +68,32 @@
             </div>
 
             <div class="group-links">
-                <a href="../assets/episodios/add" class="img-p-btn"><img src="../assets/img/contents/icon-mais.webp"
+                <a href="../Episodios/add.html" class="img-p-btn"><img src="../assets/img/contents/icon-mais.webp"
                         alt="adicionar-podcast" /><span>Add novo Podcast</span></a>
-                <a href="../assets/estatisticas/canal/6" class="img-p-btn right"><img
+                <a href="../Estatisticas/canal.html" class="img-p-btn right"><img
                         src="../assets/img/contents/view.png" alt="ver-estatisticas" /><span>Ver
                         estatísticas</span></a>
             </div>
 
             <h2>Meus envios</h2>
 
-            <div class="envio">
-                <p>Postado em 21/11/2020</p>
-                <p>Matuto se apaixonou</p>
-                <p>
-                    Uma morena dos cabelos grandes, uma estrutura dessa acabou com o
-                    homem...
+            <div style="display: none;" id="envio" class="envio">
+                <p id="data"></p>
+                <p id="titulo"></p>
+                <p id="descricao">
                 </p>
-                <a href="../assets/episodios/edit/1" class="control-link-container text-center"><img
-                        src="../assets/img/edit-icon.png" class="control-icon" alt="Editar envio" />
-                    <p>Editar envio</p>
-                </a>
                 <form name="post_61744477accba611302923" style="display: none" method="post"
                     action="../assets/canais/delete/1">
                     <input type="hidden" name="_method" value="POST" /><input type="hidden" name="_csrfToken"
                         autocomplete="off"
                         value="d3e54e3c8611aab7239f4c543df1f7559c5de9d630a377fc6bdf48b55c190623a60cea1ce706e6a288f1a862c9bcfeca25ea83458852b64a0bcc129d3d17edf7" />
                 </form>
-                <a href="#" class="control-link-container text-center"
-                    onclick="document.post_61744477accba611302923.submit(); event.returnValue = false; return false;"><img
-                        src="../assets/img/del-icon.png" class="control-icon" alt="Excluir envio" />
+                <a id="deleteEp" href="#" class="control-link-container text-center"><img src="../assets/img/del-icon.png" class="control-icon" alt="Excluir envio" />
                     <p>Excluir envio</p>
                 </a>
             </div>
-            <div class="envio">
-                <p>Postado em 21/11/2020</p>
-                <p>Recairei</p>
-                <p>
-                    Eu já te superei, mas não manda mensagem, por favor, senão recairei.
-                </p>
-                <a href="../assets/episodios/edit/2" class="control-link-container text-center"><img
-                        src="../assets/img/edit-icon.png" class="control-icon" alt="Editar envio" />
-                    <p>Editar envio</p>
-                </a>
-                <form name="post_61744477acdde573110952" style="display: none" method="post"
-                    action="../assets/canais/delete/2">
-                    <input type="hidden" name="_method" value="POST" /><input type="hidden" name="_csrfToken"
-                        autocomplete="off"
-                        value="d3e54e3c8611aab7239f4c543df1f7559c5de9d630a377fc6bdf48b55c190623a60cea1ce706e6a288f1a862c9bcfeca25ea83458852b64a0bcc129d3d17edf7" />
-                </form>
-                <a href="#" class="control-link-container text-center"
-                    onclick="document.post_61744477acdde573110952.submit(); event.returnValue = false; return false;"><img
-                        src="../assets/img/del-icon.png" class="control-icon" alt="Excluir envio" />
-                    <p>Excluir envio</p>
-                </a>
-            </div>
-            <div class="envio">
-                <p>Postado em 21/11/2020</p>
-                <p>Investe em mim</p>
-                <p>
-                    Investe em mim, aposta tudo em mim, que eu prometo te fazer feliz...
-                </p>
-                <a href="../assets/episodios/edit/3" class="control-link-container text-center"><img
-                        src="../assets/img/edit-icon.png" class="control-icon" alt="Editar envio" />
-                    <p>Editar envio</p>
-                </a>
-                <form name="post_61744477acf9c555941080" style="display: none" method="post"
-                    action="../assets/canais/delete/3">
-                    <input type="hidden" name="_method" value="POST" /><input type="hidden" name="_csrfToken"
-                        autocomplete="off"
-                        value="d3e54e3c8611aab7239f4c543df1f7559c5de9d630a377fc6bdf48b55c190623a60cea1ce706e6a288f1a862c9bcfeca25ea83458852b64a0bcc129d3d17edf7" />
-                </form>
-                <a href="#" class="control-link-container text-center"
-                    onclick="document.post_61744477acf9c555941080.submit(); event.returnValue = false; return false;"><img
-                        src="../assets/img/del-icon.png" class="control-icon" alt="Excluir envio" />
-                    <p>Excluir envio</p>
-                </a>
-            </div>
+
+            <div id="receiver" class="envio"></div>
 
             <div class="mb-5"></div>
         </div>

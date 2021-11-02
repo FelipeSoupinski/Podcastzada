@@ -94,7 +94,7 @@ exports.update = async (req, res) => {
 
 exports.destroy = async (req, res) => {
     try {
-        const canal = await Canal.findOne({where: { usuario_id: req.params.id } });
+        const canal = await Canal.findOne({ where: { usuario_id: req.params.id, deletedAt: null } });
 
         await canal.update({
             deletedAt: new Date()
