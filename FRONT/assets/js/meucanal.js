@@ -72,8 +72,6 @@ async function duplicarCampos() {
 
       document.getElementById("receiver").appendChild(clone);
     }
-  } else {
-    alert("Erro inesperado");
   }
 }
 
