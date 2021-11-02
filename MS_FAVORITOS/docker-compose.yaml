@@ -10,9 +10,9 @@ services:
     volumes:
       - ./db:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: adonis
-      MYSQL_ROOT_PASSWORD: adonis
-    network_mode: 'kafka-luby-cash'
+      MYSQL_DATABASE: favoritos
+      MYSQL_ROOT_PASSWORD: favoritos
+    network_mode: 'podcastzada'
   app:
     restart: "always"
     build:
@@ -20,7 +20,7 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - db
-    network_mode: 'kafka-luby-cash'
+    network_mode: 'podcastzada'
     volumes:
       - .:/home/node/app
       - /home/node/app/node_modules
