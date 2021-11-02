@@ -40,7 +40,7 @@
         <div class="title-add">Adicionar Podcast</div>
         <div class="linha-horizontal"></div>
 
-        <form enctype="multipart/form-data" method="post" accept-charset="utf-8" action="/PHPodCast/episodios/add">
+        <form id="podcastForm" enctype="multipart/form-data" method="post" accept-charset="utf-8" action="">
             <div class="row mt-4">
                 <div class="col-sm-4">
                     <span class="legend"> Título </span>
@@ -59,14 +59,14 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <!-- <div class="row mt-5">
                 <div class="col-sm-4">
                     <span class="legend"> Arquivo de áudio </span>
                 </div>
                 <div class="col-sm-8">
                     <input type="file" name="arquivo" id="input-arquivo" class="form-control" required />
                 </div>
-            </div>
+            </div> -->
 
             <div class="row mt-5">
                 <div class="col-sm text-center">
@@ -89,7 +89,7 @@
     <script src="../assets/js/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/js/plugins/toastr/toastr.min.js"></script>
     <script src="../assets/js/index.js"></script>
-
+    <script src="../assets/js/podcast.js"></script>
 </body>
 
 </html>

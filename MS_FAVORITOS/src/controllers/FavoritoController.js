@@ -78,7 +78,7 @@ exports.update = async (req, res) => {
 
 exports.destroy = async (req, res) => {
     try {
-        const favorito = await Favorito.findByPk(req.params.id);
+        const favorito = await Favorito.findOne({ where:{ usuario_id: req.params.id} });
 
         if (favorito.usuario_id != req.user.id) {
             res.status(401).send({
@@ -86,11 +86,7 @@ exports.destroy = async (req, res) => {
             });
         }
 
-        await Favorito.destroy({
-            where: {
-                id: req.params.id
-            }
-        });
+        await favorito.destroy();
 
         res.send({
             message: "Favorito deletado com sucesso."
