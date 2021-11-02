@@ -1,4 +1,7 @@
-const cadastrarCanal = document.querySelector("#canal");
+const canalForm = document.querySelector("#canal");
+const nomeCanal = document.getElementsByName("nome")[0];
+const categoriaCanal = document.getElementsByName("categoria")[0];
+const descricaoCanal = document.getElementsByName("descricao")[0];
 
 function parseJwt (token) {
   var base64Url = token.split('.')[1];
@@ -12,8 +15,9 @@ function parseJwt (token) {
 
 const currentUser = parseJwt(localStorage.getItem('jwt'));
 
-if(cadastrarCanal) {
-  cadastrarCanal.addEventListener("submit",  function(e) {
+if(canalForm) {
+  fillFields();
+  canalForm.addEventListener("submit",  function(e) {
    submitForm(e, this);
   });
 }
@@ -22,20 +26,42 @@ async function submitForm(e, form) {
   e.preventDefault();
   
   const jsonFormData = buildJsonFormData(form);
-  const jsonPayload = {...jsonFormData, usuario_id: currentUser.id};
+  var jsonPayload = {...jsonFormData, usuario_id: currentUser.id};
   const headers = new Headers();
   headers.set('Content-Type', 'application/json');
-  headers.set('Authorization', localStorage.getItem('jwt'));
+  headers.set('Authorization', `Bearer ${localStorage.getItem('jwt')}`);
+
+  const editOrCreate = await performPostHttpRequest('http://localhost:3004/canais/find', headers, jsonPayload);
+  const canal = await editOrCreate.json();
+
+  if(canal.canal) {
+    jsonPayload = {id: canal.canal.id, ...jsonPayload};
+  }
 
   const rawResponse = await performPostHttpRequest('http://localhost:3004/canais', headers, jsonPayload);
   const jsonResponse = await rawResponse.json();
 
   if(rawResponse.status === 200) {
-    alert()
+    alert(jsonResponse.message);
+    window.location.href = '../Canais/meucanal.html';
   } else if(rawResponse.status === 401) {
     alert(jsonResponse.message);
   } else {
     alert('Erro inesperado');
+  }
+}
+
+async function fillFields() {
+  const headers = new Headers();
+  headers.set('Content-Type', 'application/json');
+  headers.set('Authorization', `Bearer ${localStorage.getItem('jwt')}`);
+
+  const editOrCreate = await performPostHttpRequest('http://localhost:3004/canais/find', headers, {usuario_id: currentUser.id});
+  const canal = await editOrCreate.json();
+  if(canal.canal) {
+    nomeCanal.value = canal.canal.nome;
+    categoriaCanal.value = canal.canal.categoria;
+    descricaoCanal.value = canal.canal.descricao;
   }
 }
 

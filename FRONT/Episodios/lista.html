@@ -19,7 +19,7 @@
 
 <body>
     <header class="header-est">
-        <a href="/PHPodCast"><img src="../assets/img/contents/logo-sem-fundo.png" class="logo"
+        <a href="../Home/home.html"><img src="../assets/img/contents/logo-sem-fundo.png" class="logo"
                 alt="logo PHPodCast" /></a>
         <form method="post" accept-charset="utf-8" class="search-form" action="/PHPodCast/pesquisa/search">
             <div class="input search required"><input type="search" name="pesquisa" class="search-bar"
@@ -33,7 +33,7 @@
         <div class="dropdown-menu mr-3" aria-labelledby="dropdownMenuPerfil">
             <a href="../Usuarios/configuracoes.html" class="dropdown-item">Configurações</a> 
             <a href="../Canais/meucanal.html" class="dropdown-item">Meu canal</a>
-            <a href="/PHPodCast/login/logout" class="dropdown-item">Sair</a> </div>
+            <a id="logout" href="../Login/login.html" class="dropdown-item">Sair</a> </div>
     </header>
     <main>
         <div class="mt-3 colunm" id="infoPadrao">
@@ -234,6 +234,7 @@
             });
         }
     </script>
+    <script src="../assets/js/index.js"></script>
 
 </body>
 

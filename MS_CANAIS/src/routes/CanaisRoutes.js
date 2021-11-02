@@ -3,6 +3,7 @@ const CanalController = require('../controllers/CanalController');
 const auth = require('../middleware/auth');
 
 router.post('/', auth, CanalController.create);
+router.post('/find', auth, CanalController.findByUserId);
 router.get('/', auth, CanalController.index);
 router.get('/:id', auth, CanalController.show);
 router.put('/:id', auth, CanalController.update);
